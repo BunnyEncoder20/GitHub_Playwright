@@ -8,7 +8,7 @@ def playwright_setup():
 
 @pytest.fixture(scope="session")
 def browser(playwright_setup):
-    browser = playwright_setup.chromium.launch(headless=False)
+    browser = playwright_setup.chromium.launch(headless=True)
     # browser = playwright_setup.firefox.launch(headless=False)
     # browser = playwright_setup.webkit.launch(headless=False)
     yield browser
